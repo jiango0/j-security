@@ -27,7 +27,6 @@
                 <artifactId>service-common</artifactId>
                 <version>${jzc.version}</version>
             </dependency>
-
             <!-- servlet、jsp setting -->
             <dependency>
                 <groupId>javax.servlet</groupId>
