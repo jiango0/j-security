@@ -28,7 +28,8 @@ public class OAuth2AuthorizationConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
+        clients
+                .inMemory()
                 .withClient("client")
                 .secret("client")
                 .accessTokenValiditySeconds(10000)
@@ -39,7 +40,8 @@ public class OAuth2AuthorizationConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.tokenStore(tokenStore)
+        endpoints
+                .tokenStore(tokenStore)
                 .authenticationManager(authenticationManager)
                 .userDetailsService(userService);
     }
